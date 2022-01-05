@@ -1,0 +1,12 @@
+-- 보호소에 들어온 동물 리스트 ANIMAL_INS
+-- 보호소에서 입양보낸 동물 리스트 ANIMAL_OUTS
+-- 가장 오랜기간 보호한 동물 셋 출력
+-- >>> INS테이블의 이름을 기준으로 OUT테이블에 NULL인 동물 출력
+-- >>> DATETIME 순으로 
+-- >>> 3 LIMIT
+SELECT INS.NAME,INS.DATETIME
+FROM ANIMAL_INS INS LEFT OUTER JOIN ANIMAL_OUTS OUTS
+    on INS.ANIMAL_ID=OUTS.ANIMAL_ID
+WHERE OUTS.ANIMAL_ID IS NULL
+ORDER BY INS.DATETIME ASC
+LIMIT 3
