@@ -1,0 +1,8 @@
+-- 루시와 엘라 조회하기
+-- REGEXP(정규표현식)를 사용해서 
+-- 이름에 el을 포함하는 강아지 => WHERE NAME REGEXP "el"
+SELECT ANIMAL_ID,NAME
+FROM ANIMAL_INS
+WHERE NAME REGEXP "el"
+AND ANIMAL_TYPE = 'DOG'
+ORDER BY NAME
