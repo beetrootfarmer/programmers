@@ -11,6 +11,7 @@ WHERE NAME REGEXP "^(Milk|Yogurt)$"
 ORDER BY CART_ID
 
 
+
 방법1. yogurt를 가진 카트 테이블과 Milk를 가진 카트 테이블 조인 
 SELECT DISTINCT Y.CART_ID AS CART_ID
     FROM CART_PRODUCTS AS Y
@@ -18,7 +19,7 @@ SELECT DISTINCT Y.CART_ID AS CART_ID
     LEFT JOIN
     (SELECT DISTINCT M.CART_ID
     FROM CART_PRODUCTS AS M
-        WHERE M.NAME = 'Milk'
+        WHERE M.NAME = 'Milk' 
     ) ON Y.CART_ID = M.CART_ID
     ORDER BY Y.CART_ID
 
