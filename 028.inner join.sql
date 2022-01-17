@@ -15,7 +15,7 @@ ORDER BY CART_ID
 방법1. yogurt를 가진 카트 테이블과 Milk를 가진 카트 테이블 조인 
 SELECT DISTINCT Y.CART_ID AS CART_ID
     FROM CART_PRODUCTS AS Y
-    WHERE Y.NAME='Yogurt'
+    WHERE Y.NAME='Yogurt' 
     LEFT JOIN
     (SELECT DISTINCT M.CART_ID
     FROM CART_PRODUCTS AS M
