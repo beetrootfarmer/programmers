@@ -9,7 +9,7 @@ SELECT CART_ID
 FROM CART_PRODUCTS
 WHERE NAME REGEXP "^(Milk|Yogurt)$"
 ORDER BY CART_ID
-
+ 
 
 
 방법1. yogurt를 가진 카트 테이블과 Milk를 가진 카트 테이블 조인 
